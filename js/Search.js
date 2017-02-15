@@ -21,7 +21,7 @@ const Search = React.createClass({
             .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0)
             .map((show) => {
               return (
-                <ShowCard key={show.imdbID} {...show} />
+                <ShowCard key={show.vidID} {...show} />
               )
             })}
         </div>

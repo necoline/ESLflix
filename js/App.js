@@ -27,7 +27,7 @@ const App = () => {
         <Match
           pattern='/details/:id'
           component={(props) => {
-            const shows = preload.shows.filter((show) => props.params.id === show.imdbID)
+            const shows = preload.shows.filter((show) => props.params.id === show.vidID)
             return <AsyncRoute
               props={Object.assign({show: shows[0]}, props)}
               loadingPromise={System.import('./Details')}

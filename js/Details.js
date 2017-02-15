@@ -13,16 +13,16 @@ const Details = React.createClass({
       poster: string,
       trailer: string,
       description: string,
-      imdbID: string
+      vidID: string
     }),
     omdbData: shape({
-      imdbID: string
+      vidID: string
     }),
     dispatch: func
   },
   componentDidMount () {
     if (!this.props.omdbData.imdbRating) {
-      this.props.dispatch(getOMDBDetails(this.props.show.imdbID))
+      this.props.dispatch(getOMDBDetails(this.props.show.vidID))
     }
   },
   render () {
@@ -38,7 +38,7 @@ const Details = React.createClass({
         <Header />
         <section>
           <h1>{title}</h1>
-          <h2>({year})</h2>
+          {/* <h2>({year})</h2> */}
           {rating}
           <img src={`/public/img/posters/${poster}`} />
           <p>{description}</p>
@@ -52,7 +52,7 @@ const Details = React.createClass({
 })
 
 const mapStateToProps = (state, ownProps) => {
-  const omdbData = state.omdbData[ownProps.show.imdbID] ? state.omdbData[ownProps.show.imdbID] : {}
+  const omdbData = state.omdbData[ownProps.show.vidID] ? state.omdbData[ownProps.show.vidID] : {}
   return {
     omdbData
   }
