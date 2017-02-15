@@ -22,7 +22,7 @@ const Landing = React.createClass({
   render () {
     return (
       <div className='landing'>
-        <h1>svideo</h1>
+        <h1>ESL Flix</h1>
         <form onSubmit={this.handleSearchSubmit}>
           <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search' />
         </form>

@@ -29,7 +29,7 @@ class Header extends React.Component {
       <header>
         <h1>
           <Link to='/'>
-            svideo
+            ESL Flix
           </Link>
         </h1>
         {utilSpace}
